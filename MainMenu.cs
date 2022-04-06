@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace BOT
 {
-     class MainMenu
+    class MainMenu
     {
         static void Main(string[] args)
         {
+            // console title !
+            Console.Title = "Example Loader";
+
             // logo and text
             Login.Menu();
 
@@ -20,34 +23,24 @@ namespace BOT
 
             Console.WriteLine(text1);
 
-            Console.ForegroundColor= ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(option1);
+
+            Console.ReadKey();
             string choose = Console.ReadLine();
 
-            // option 1 open discord
+            // if you choose option 1 open discord
             if (choose == "1")
             {
                 var prc = new ProcessStartInfo("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-                 prc.Arguments = ("https://discord.gg/uR9UDq7JVd");
+                prc.Arguments = ("https://discord.gg/uR9UDq7JVd");
                 Process.Start(prc);
-            }
-
-            Console.ReadLine();
-
-            // Radom console title character generator
-            if (text1 == text1)
+            } else
             {
-                while (true)
-                {
-                    Console.Title = "5656858ADZSZZZDD8495";
-                    Console.Title = "03L.YUKUUK58470495";
-                    Console.Title = "2831724143425495";
-                    Console.Title = "34RHRHTHTGH7575795";
-                    Console.Title = "0JZFZFZF738495";
-                    Console.Title = "802453JRNNEUIJFZF95";
-                    break;
-                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error this is not in the command list !");
             }
+            Console.ReadLine();
         }
     }
 }
