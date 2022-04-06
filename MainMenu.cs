@@ -26,7 +26,6 @@ namespace BOT
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(option1);
 
-            Console.ReadKey();
             string choose = Console.ReadLine();
 
             // if you choose option 1 open discord
@@ -37,9 +36,10 @@ namespace BOT
                 Process.Start(prc);
             } else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error this is not in the command list !");
+                Console.WriteLine("Error " + "'" + choose + "'" + "is not in the command list !");
             }
+
+         
             Console.ReadLine();
         }
     }
